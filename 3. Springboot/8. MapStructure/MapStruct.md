@@ -1,6 +1,7 @@
 # MapStruct
 MapStruct – bu compile-time code generator, ya’ni u kompilyatsiya vaqtida DTO ↔ Entity kabi obyektlarni avtomatik mapper kodiga aylantirib beradi.
 
+## Dependencies
 ```xml
 <!-- MapStruct -->
 <dependency>
@@ -18,6 +19,7 @@ MapStruct – bu compile-time code generator, ya’ni u kompilyatsiya vaqtida DT
 
 ---
 
+## Entities
 ```java
 package uz.tohir.test.TestApplication.entity;
 
@@ -218,6 +220,7 @@ public class Section extends AbsLongEntity {
 
 ----
 
+## Mappers
 ```java
 package uz.tohir.test.TestApplication.mapper;
 
@@ -366,6 +369,7 @@ public interface SubjectMapper {
 
 ---
 
+# Dtos
 ```java
 package uz.tohir.test.TestApplication.payload.subjectDto;
 
@@ -437,3 +441,5 @@ public record SectionCreator(
 }
 ```
 
+---
+_By: Tokhir ASADOV_
