@@ -404,4 +404,36 @@ public record UpdateSubjectDto(
         @ValidLanguage Language lang
 ) {}
 ```
+```java
+package uz.tohir.test.TestApplication.payload.paragraph;
+
+import jakarta.validation.constraints.Size;
+import uz.tohir.test.TestApplication.validation.paragraph.ValidParagraphCreator;
+import uz.tohir.test.TestApplication.validation.subject.ValidSubjectId;
+
+@ValidParagraphCreator
+public record ParagraphCreator(
+        @Size(min = 1, max = 100, message = "Name should have at least 1 characters")
+        String name,
+        @Size(min = 1, max = 30, message = "Code should have at least 1 characters")
+        String code,
+        @ValidSubjectId Long subjectId) {
+}
+```
+```java
+package uz.tohir.test.TestApplication.payload.section;
+
+import jakarta.validation.constraints.Size;
+import uz.tohir.test.TestApplication.validation.paragraph.ValidParagraphId;
+import uz.tohir.test.TestApplication.validation.section.ValidSectionCreator;
+
+@ValidSectionCreator
+public record SectionCreator(
+        @Size(min = 1, max = 100,message = "Name should have at least 1 character")
+        String name,
+        @Size(min = 1, max = 30,message = "Code should have at least 1 character")
+        String code,
+        @ValidParagraphId Long paragraphId) {
+}
+```
 
