@@ -60,3 +60,10 @@ public class ValidLoginValidator implements ConstraintValidator<ValidLogin,Strin
     }
 }
 ```
+
+---
+
+### Class levelda foydalanish mumkin bo'lgan annotation yaratish
+```java
+@Target(ElementType.TYPE)
+```
